@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Stream Management</title>
+</head>
+<body class="w-full h-auto box-border">
+
+    <!-- Entete -->
+    <header class="w-full h-15 bg-[#E1EEFF] flex items-center justify-around">
+        <!-- Div Logo -->
+        <div class="w-50 h-8 flex items-center justify-center">
+            <img src="../images/Logo-stream-management.png" alt="">
+        </div>
+        <!-- Burger -->
+        <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <button type="button" id="btnMenu" class="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-800 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 text-black focus:ring-blue-700" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="material-icons">Menu</span>
+            </button>
+        </div>
+        <!-- La navbar -->
+        <nav class="w-2/5 h-10 hidden sm:block sm:ml-6">
+            <ul class="w-full h-full flex items-center justify-between ">
+                <li> <a href="#"> Nos offres </a> </li>
+                <li> <a href="#"> Nos clients </a> </li>
+                <li> <a href="#"> Nos services </a> </li>
+                <li> <a href="#"> Qui sommes-nous </a> </li>
+                <li> <a href="#"> Contactez-nous </a> </li>
+            </ul>
+        </nav>
+        <!-- Mobile menu -->
+        <div class="hidden" id="menuMob">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">À propos</a>
+              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full flex flex-col items-center">
+        <section class="home-img w-full h-auto min-h-[35rem] relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 " >
+            <div class="absolute inset-0" style="opacity: 1; transform: none;">
+                <img src="/images/image1.jpg" alt="Slide 1" id="slide" class="h-full w-full object-cover opacity-50 transition-transform duration-500 ease-in-out">
+            </div>
+            <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white w-4" aria-label="Go to slide 1"> </button>
+                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white/50" aria-label="Go to slide 2"> </button>
+                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white/50" aria-label="Go to slide 3"> </button>
+            </div>
+            <div class="relative z-10 flex h-full items-center justify-start px-8 text-left">
+                <div class="space-y-6">
+                    <h1 class="max-w-lg text-4xl font-bold text-white" style="opacity: 1; transform: none;">Enrichissez votre écosystème digital et accélérez votre business</h1>
+                    <p class="max-w-md text-lg text-white" style="opacity: 1; transform: none;">Faites le choix d'un acteur de confiance pour déployer, enrichir et maintenir des solutions collaboratives et digitales (ECM/CCM/Office 365) de dernière génération au sein de votre entreprise.</p>
+                    <button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700" style="opacity: 1; transform: none;">Voir nos offres</button>
+                </div>
+            </div>
+        </section>
+        <section class="offres w-full flex flex-col justify-around items-center gap-5">
+            <h2 class="text-3xl font-bold text-center mt-10">Nos offres</h2>
+            <span> Des solutions sur-mesure adaptées à vos besoins en digitalisation </span>
+            <div class="w-3/5 flex gap-5">
+                <button data-id="1" class="cards w-[280px] h-[140px] flex flex-col items-center justify-evenly border border-gray-200 hover:border-[#2B79C2] rounded-lg shadow-md text-center p-3">
+                    <h3 class="text-lg font-semibold"> Customer Content Management </h3>
+                    <p> Gestion centralisée de vos contenus digitaux </p>
+                </button>
+                <button data-id="2" class="cards w-[280px] h-[140px] flex flex-col items-center justify-evenly border border-gray-200 hover:border-[#2B79C2] rounded-lg shadow-md text-center p-3">
+                    <h3 class="text-xl font-semibold"> Enterprise Content Management </h3>
+                    <p> Solutions complètes de gestion documentaire </p>
+                </button>
+                <button data-id="3" class="cards w-[280px] h-[140px] flex flex-col items-center justify-evenly border border-gray-200 hover:border-[#2B79C2] rounded-lg shadow-md text-center p-3">
+                    <h3 class="text-xl font-semibold"> Office 365 & Solutions </h3>
+                    <p> Intégration et déploiement collaboratif </p>
+                </button>
+            </div>
+            <div class="main-card w-[70rem] h-[250px] bg-[#2B79C2] flex flex-col items-center justify-between rounded-lg shadow-md text-white text-center p-5">
+                <h2 id="titre" class="text-2xl font-bold"> Customer Content Management </h2>
+                <div class="w-full h-[150px] flex gap-2">
+                    <div class="w-1/3 h-full flex flex-col justify-evenly items-center ">
+                        <h3 class="font-medium text-lg">Bénéfices</h3>
+                        <button class="bg-white text-[#2B79C2] rounded-lg p-2">Je veux un projet CCM</button>
+                    </div>
+                    <div class="w-1/3 h-full flex flex-col items-center justify-evenly">
+                        <h3 class="font-medium text-lg">Solutions techniques</h3>
+                        <div class="space-y-2">
+                            <ul id="liste" class="flex flex-col items-start"> </ul>
+                        </div>
+                    </div>
+                    <div class="w-1/3 h-full flex flex-col justify-center">
+                        <h3 class="font-medium text-lg text-center mb-4">Partenaires</h3>
+                        <div id="logos-div" class="w-full flex justify-evenly space-y-3 flex-wrap">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="w-[75rem] flex justify-center items-center py-10 bg-gray-100 mt-12" style="opacity: 1; transform: none;">
+            <div class="container" id="services" style="opacity: 1; transform: none;">
+                <h2 class="text-2xl font-bold mb-4 text-center">Nos Services</h2>
+                <h2 class="section-title text-center text-gray-800">Stream Management met son expertise au service de vos projets</h2>
+                <p class="section-subtitle text-center text-gray-600">En digitalisant votre environnement de travail et vos processus métiers, vous améliorez la productivité de vos équipes...</p>
+                <div class="w-full flex px-15 flex-col md:flex-row gap-6 justify-center mt-10">
+                    <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
+                        <div class="w-full h-[10rem] service-card-header">
+                            <img src="../images/img_card1.png" class="w-full h-full object-cover rounded-t-lg" alt="">
+                        </div>
+                        <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
+                            <h3 class="text-xl font-bold">Audit stratégique et conseil en intégration</h3>
+                            <p class="text-gray-800">Nos consultants vous accompagnent en amont de vos projets à travers des ateliers stratégiques.</p>
+                        </div>
+                    </div>
+                    <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
+                        <div class="w-full h-[10rem] service-card-header">
+                            <img src="../images/img_card2.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                        </div>
+                        <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
+                            <h3 class="text-xl font-bold">Gestion de projets informatiques</h3>
+                            <p class="text-gray-800">Nous proposons un accompagnement global sur l'ensemble du cycle de vie de vos projets.</p>
+                        </div>
+                    </div>
+                    <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
+                        <div class="w-full h-[10rem] service-card-header">
+                            <img src="../images/img_card3.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                        </div>
+                        <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
+                            <h3 class="text-xl font-bold">Formations et conduite du changement</h3>
+                            <p class="text-gray-800">Nous menons des plans de transformation autour de la communication et formation.</p>
+                        </div>
+                    </div>
+                    <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
+                        <div class="w-full h-[10rem] service-card-header">
+                            <img src="../images/img_card4.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                        </div>
+                        <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
+                            <h3 class="text-xl font-bold">Délégation de compétences / régie</h3>
+                            <p class="text-gray-800">Nous renforçons vos équipes en proposant des profils techniques et métiers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-[75rem] py-5 bg-white mt-12" id="clients">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#2d3748]">Nos Clients</h2>
+                <h2 class="text-3xl font-bold text-[#2d3748]">Ils nous font confiance</h2>
+            </div>
+            <div class="overflow-hidden mt-10">
+                <div class="flex space-x-10" id="logo-container">
+                    <!-- Logos des clients -->
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <!-- Répéter les logos pour un défilement fluide -->
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-[75rem] px-8 py-16 bg-gray-100 " id="about">
+            <div class="flex flex-col md:flex-row items-start gap-10 mb-16" style="opacity: 1; transform: none;">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" style="opacity: 1; transform: none;">Notre Mission</h2>
+                    <p class="text-gray-600 mb-4" style="opacity: 1; transform: none;">
+                        Notre mission est d'accompagner les entreprises, notamment les grands acteurs du CAC 40, 
+                        dans leur transformation digitale en apportant leur expertise sur des sujets clés comme 
+                        ECM (Enterprise Content Management), CCM (Customer Communication Management) et Office 365.
+                    </p>
+                    <p class="text-gray-600" style="opacity: 1; transform: none;">
+                        Avec plus de 11 ans d'expérience dans des projets d’envergure, leur équipe de passionnés du 
+                        digital et de la technologie met à disposition son savoir-faire pour offrir des solutions 
+                        innovantes et adaptées aux besoins des entreprises.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-between flex-wrap gap-6" style="opacity: 1; transform: none;">
+                    <div class="w-[10rem] p-6 bg-white rounded-lg shadow-md flex flex-col items-center md:w-[45%] border-l-4 border-[#2B79C2]">
+                        <h3 class="text-3xl font-bold text-gray-800">+5</h3>
+                        <p class="text-gray-600 text-sm text-center">clients parmi de grands acteurs du CAC 40</p>
+                    </div>
+                    <div class="w-[10rem] p-6 bg-white rounded-lg shadow-md flex flex-col items-center md:w-[45%] border-r-4 border-[#2B79C2]">
+                        <h3 class="text-3xl font-bold text-gray-800">3</h3>
+                        <p class="text-gray-600 text-sm text-center">domaines d’expertise sur les sujets ECM, CCM et Office 365</p>
+                    </div>
+                    <div class="w-[10rem] p-6 bg-white rounded-lg shadow-md flex flex-col items-center md:w-[45%] border-l-4 border-[#2B79C2]">
+                        <h3 class="text-3xl font-bold text-gray-800">11</h3>
+                        <p class="text-gray-600 text-sm text-center">années d’expertise sur des projets de grande ampleur</p>
+                    </div>
+                    <div class="w-[10rem] p-6 bg-white rounded-lg shadow-md flex flex-col items-center md:w-[45%] border-r-4 border-[#2B79C2]">
+                        <h3 class="text-3xl font-bold text-gray-800">+10</h3>
+                        <p class="text-gray-600 text-sm text-center">passionnés de digital et de technologie à votre service</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[70rem] bg-white p-10 rounded-lg shadow-md" style="opacity: 1; transform: none;">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center" style="opacity: 1; transform: none;">
+                    Notre Équipe
+                </h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto" style="opacity: 1; transform: none;">
+                    Une équipe d'experts engagés dans la transformation digitale, apportant leur savoir-faire et leur 
+                    passion pour accompagner les entreprises dans leurs projets stratégiques.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
+                        <img src="../images/profile1.jpg" alt="Mme MMM MMMM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Mme Naaar</h3>
+                            <p class="text-gray-600">Directrice Générale</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
+                        <img src="../images/profile2.jpg" alt="M. LOREM LOREM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">M. Choco Choco</h3>
+                            <p class="text-gray-600">Président</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
+                        <img src="../images/profile3.jpg" alt="M. LIP LIP" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">M. Jaay Taar</h3>
+                            <p class="text-gray-600">Responsable Conformité</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="w-[75rem] py-12 bg-blue-50" id="contact" style="opacity: 1; transform: none;">
+            <div class="max-w-6xl mx-auto px-4 text-center" style="opacity: 1; transform: none;">
+                <h2 class="text-2xl font-bold mb-10">Contactez-nous</h2>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2 space-y-6" style="opacity: 1; transform: none;">
+                        <div>
+                            <h3 class="font-semibold mb-1">Royaume-Uni</h3>
+                            <p>1010 Avenue de la Lune, New York, NY 10018 U.S.</p>
+                            <p>+1 (212) 345-7890</p>
+                            <p>business@exemple.com</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Allemagne</h3>
+                            <p>1010 Avenue de la Lune, Berlin, DE 12345</p>
+                            <p>+49 30 123456</p>
+                            <p>business@exemple.de</p>
+                        </div>
+                    </div>
+                    <form class="md:w-1/2 space-y-4" style="opacity: 1; transform: none;">
+                        <input type="text" placeholder="Votre nom" class="w-full border border-gray-300 p-2 rounded" style="opacity: 1; transform: none;">
+                        <input type="email" placeholder="Votre email" class="w-full border border-gray-300 p-2 rounded" style="opacity: 1; transform: none;">
+                        <input type="tel" placeholder="Votre téléphone" class="w-full border border-gray-300 p-2 rounded" style="opacity: 1; transform: none;">
+                        <textarea placeholder="Votre message" rows="5" class="w-full border border-gray-300 p-2 rounded" style="opacity: 1; transform: none;"></textarea>
+                        <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700" style="opacity: 1; transform: none;">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="w-[75rem] bg-blue-100 text-white py-12">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-16">
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="../images/Logo-stream-management.png" alt="Stream Management" class="w-24 mb-2">
+                    <p class="text-sm font-semibold text-[#2B579A]">Stream Management</p>
+                </div>
+                <div class="text-left text-[#2B579A] md:text-left mt-4 md:mt-0">
+                    <h3 class="font-bold text-lg">Contactez-nous :</h3>
+                    <p>12 rue Vivienne 75002 Paris</p>
+                    <p>Tél: 06 16 40 59 16</p>
+                    <p>contact@stream-management.fr</p>
+                </div>
+                <div class="text-center md:text-right mt-4 md:mt-0 text-[#2B579A]">
+                    <p class="font-bold">
+                        <a href="#" class="hover:underline">Mentions Légales</a>
+                        -
+                        <a href="#" class="hover:underline"> Politique d’utilisation des données personnelles</a>
+                    </p>
+                    <p class="text-sm mt-1">© 2019 Stream Management - Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/cards.js"></script>
+    <script src="../js/menu.js"></script>
+
+</body>
+</html>
