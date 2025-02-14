@@ -51,21 +51,3 @@ function load_mainCard(id) {
     ).join('')
 }
 
-// Sélectionner le conteneur des logos
-const logoContainer = document.getElementById('logo-container');
-
-// Cloner les logos pour un défilement fluide
-logoContainer.innerHTML += logoContainer.innerHTML;
-
-// Fonction pour animer le défilement
-function scrollLogos() {
-    // Déplacer les logos vers la gauche
-    if (logoContainer.scrollLeft >= logoContainer.scrollWidth / 5) {
-        logoContainer.scrollLeft = 0; // Réinitialiser la position
-    } else {
-        logoContainer.scrollLeft += 1; // Déplacer de 1 pixel
-    }
-}
-
-// Démarrer l'animation
-setInterval(scrollLogos, 20); // Ajuster la vitesse ici (20ms)

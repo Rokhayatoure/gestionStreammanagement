@@ -48,3 +48,11 @@ logos.forEach(logo => {
         logo.classList.remove('rotate-0')
     })
 })
+
+function setDots(dots, pos) {
+    console.log(pos)
+    dots.forEach(dot => {
+        dot.classList.remove('current')
+    })
+    dots[pos - 1].classList.add('current')
+}
