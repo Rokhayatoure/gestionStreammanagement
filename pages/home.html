@@ -1,56 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.css" rel="stylesheet" />
     <title>Stream Management</title>
+
+    <style>
+        /* Définition de l'animation keyframes */
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        /* Classe d'animation à appliquer */
+        .animate-scroll {
+          animation: scroll 10s linear infinite;
+        }
+    </style>
 </head>
 <body class="w-full h-auto box-border">
 
     <!-- Entete -->
-    <header class="w-full h-15 bg-[#E1EEFF] flex items-center justify-around">
+    <header class="fixed top-0 w-full h-15 bg-[#E1EEFF] flex items-center justify-around mb-10 z-50">
         <!-- Div Logo -->
         <div class="w-50 h-8 flex items-center justify-center">
-            <img src="../images/Logo-stream-management.png" alt="">
-        </div>
-        <!-- Burger -->
-        <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-            <button type="button" id="btnMenu" class="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-800 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 text-black focus:ring-blue-700" aria-controls="mobile-menu" aria-expanded="false">
-                <span class="material-icons">Menu</span>
-            </button>
+            <img src="../images/Logo-stream-management.png" alt="" >
         </div>
         <!-- La navbar -->
         <nav class="w-2/5 h-10 hidden sm:block sm:ml-6">
             <ul class="w-full h-full flex items-center justify-between ">
-                <li> <a href="#"> Nos offres </a> </li>
-                <li> <a href="#"> Nos clients </a> </li>
-                <li> <a href="#"> Nos services </a> </li>
-                <li> <a href="#"> Qui sommes-nous </a> </li>
-                <li> <a href="#"> Contactez-nous </a> </li>
+                <li> <a href="#offres"> Nos offres </a> </li>
+                <li> <a href="#clients"> Nos clients </a> </li>
+                <li> <a href="#services"> Nos services </a> </li>
+                <li> <a href="#about"> Qui sommes-nous </a> </li>
+                <li> <a href="#contact"> Contactez-nous </a> </li>
             </ul>
         </nav>
-        <!-- Mobile menu -->
-        <div class="hidden" id="menuMob">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
-              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">À propos</a>
-              <a href="#" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            </div>
-        </div>
     </header>
 
-    <main class="w-full flex flex-col items-center">
-        <section class="home-img w-full h-auto min-h-[35rem] relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 " >
-            <div class="absolute inset-0" style="opacity: 1; transform: none;">
+    <main class="w-full flex flex-col items-center mt-15">
+        <section id="" class="home-img w-full h-auto min-h-[35rem] relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 " >
+            <div class="absolute inset-0 flex transition-transform duration-500 ease-in-out" id="slideContainer">
                 <img src="/images/image1.jpg" alt="Slide 1" id="slide" class="h-full w-full object-cover opacity-50 transition-transform duration-500 ease-in-out">
             </div>
             <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white w-4" aria-label="Go to slide 1"> </button>
-                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white/50" aria-label="Go to slide 2"> </button>
-                <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white/50" aria-label="Go to slide 3"> </button>
+                <button class="dots h-2 w-2 rounded-full transition-all" data-img="/images/image1.jpg" aria-label="Go to slide 1"> </button>
+                <button class="dots h-2 w-2 rounded-full transition-all" data-img="/images/image2.jpg" aria-label="Go to slide 2"> </button>
+                <button class="dots h-2 w-2 rounded-full transition-all" data-img="/images/image3.jpg" aria-label="Go to slide 3"> </button>
             </div>
             <div class="relative z-10 flex h-full items-center justify-start px-8 text-left">
                 <div class="space-y-6">
@@ -60,7 +61,8 @@
                 </div>
             </div>
         </section>
-        <section class="offres w-full flex flex-col justify-around items-center gap-5">
+
+        <section id="offres" class="offres w-full flex flex-col justify-around items-center gap-5">
             <h2 class="text-3xl font-bold text-center mt-10">Nos offres</h2>
             <span> Des solutions sur-mesure adaptées à vos besoins en digitalisation </span>
             <div class="w-3/5 flex gap-5">
@@ -99,6 +101,7 @@
                 </div>
             </div>
         </section>
+
         <section id="services" class="w-full flex justify-center items-center py-10 bg-gray-100 mt-12" style="opacity: 1; transform: none;">
             <div class="container" id="services" style="opacity: 1; transform: none;">
                 <h2 class="text-2xl font-bold mb-4 text-center">Nos Services</h2>
@@ -144,62 +147,54 @@
                 </div>
             </div>
         </section>
-        <section class="w-[75rem] py-5 bg-white mt-12" id="clients">
+
+        <section id="clients" class="w-[75rem] py-5 bg-white mt-12 mx-auto">
             <div class="text-center">
-                <h2 class="text-2xl font-bold mb-4 text-center text-[#2d3748]">Nos Clients</h2>
-                <h2 class="text-3xl font-bold text-[#2d3748]">Ils nous font confiance</h2>
+              <h2 class="text-2xl font-bold mb-4 text-[#2d3748]">Nos Clients</h2>
+              <h2 class="text-3xl font-bold text-[#2d3748]">Ils nous font confiance</h2>
             </div>
             <div class="overflow-hidden mt-10">
-                <div class="flex space-x-10" id="logo-container">
-                    <!-- Logos des clients -->
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <!-- Répéter les logos pour un défilement fluide -->
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
-                    <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
-                    </div>
+              <!-- Ajoutez la classe animate-scroll ici -->
+              <div class="flex space-x-10 animate-scroll" id="logo-container">
+                <!-- Logos des clients -->
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo1.png" alt="Client 0" class="client-logo">
                 </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo2.png" alt="Client 1" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo3.png" alt="Client 2" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo4.png" alt="Client 3" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo5.png" alt="Client 4" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo6.png" alt="Client 0" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo7.png" alt="Client 1" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo8.png" alt="Client 2" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo9.png" alt="Client 3" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo10.png" alt="Client 4" class="client-logo">
+                </div>
+                <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
+                  <img src="/images/logo11.png" alt="Client 4" class="client-logo">
+                </div>
+              </div>
             </div>
         </section>
 
-        <section class="w-[75rem] px-8 py-16 bg-gray-100 " id="about">
+        <section id="about" class="w-[75rem] px-8 py-16 bg-gray-100 ">
             <div class="flex flex-col md:flex-row items-start gap-10 mb-16" style="opacity: 1; transform: none;">
                 <div class="flex-1">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4" style="opacity: 1; transform: none;">Notre Mission</h2>
@@ -267,7 +262,7 @@
             </div>
         </section>
         
-        <section class="w-[75rem] py-12 bg-blue-50" id="contact" style="opacity: 1; transform: none;">
+        <section id="contact" class="w-[75rem] py-12 bg-blue-50" style="opacity: 1; transform: none;">
             <div class="max-w-6xl mx-auto px-4 text-center" style="opacity: 1; transform: none;">
                 <h2 class="text-2xl font-bold mb-10">Contactez-nous</h2>
                 <div class="flex flex-col md:flex-row gap-8">

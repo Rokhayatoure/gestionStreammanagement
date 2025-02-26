@@ -28,7 +28,7 @@ cards.forEach((card, id) => {
     card.addEventListener('click', () => {
         // Pour réinitialiser les cards
         cards.forEach(crd => crd.classList.remove('bg-[#2B79C2]', 'text-white'))
-        // Pour ajouter les propriétés
+        // Pour ajouter les propriétés 
         card.classList.add('bg-[#2B79C2]', 'text-white')
         // Chargement des données dans ma carte principale
         load_mainCard(id)
