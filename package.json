@@ -9,7 +9,7 @@
     "start": "serve -s dist -l $PORT"
   },
   "dependencies": {
-    "vite": "^5.1.0",
-    "serve": "^14.2.5"
+    "serve": "^14.2.5",
+    "vite": "^5.4.19"
   }
 }
