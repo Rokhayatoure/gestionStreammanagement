@@ -9,7 +9,6 @@
    
     "start": "serve -s dist -l $PORT"
   },
- 
   "devDependencies": {
     "vite": "^5.1.0"
   },
