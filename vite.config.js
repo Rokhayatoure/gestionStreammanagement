@@ -1,17 +1,19 @@
-import { defineConfig } from 'vite'
+import { build } from 'vite';
 
-export default defineConfig({
-  root: '.',
-  publicDir: 'public',
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets'
-  },
-//  server: {
-//   port: process.env.PORT || 4000, // Render remplace process.env.PORT automatiquement
-//    host: true, 
-//   open: false
+async function runBuild() {
+  try {
+    await build({
+      root: '.',
+      build: {
+        outDir: 'dist',
+        assetsDir: 'assets'
+      }
+    });
+    console.log('Build réussi !');
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+}
 
-// }
-
-}) 
+runBuild();
