@@ -7,8 +7,11 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets'
   },
-  server: {
-    port: 3000,
-    open: true
-  }
+ server: {
+  port: process.env.PORT || 4000, // Render remplace process.env.PORT automatiquement
+   host: true, 
+  open: false
+
+}
+
 }) 

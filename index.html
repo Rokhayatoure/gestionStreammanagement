@@ -13,7 +13,7 @@
     <header class="w-full h-15 bg-[#E1EEFF] flex items-center justify-around">
         <!-- Div Logo -->
         <div class="w-50 h-8 flex items-center justify-center">
-            <img src="../images/Logo-stream-management.png" alt="">
+            <img src="public/images/Logo-stream-management.png" alt="">
         </div>
         <!-- Burger -->
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -24,11 +24,12 @@
         <!-- La navbar -->
         <nav class="w-2/5 h-10 hidden sm:block sm:ml-6">
             <ul class="w-full h-full flex items-center justify-between ">
-                <li> <a href="#"> Nos offres </a> </li>
-                <li> <a href="#"> Nos clients </a> </li>
-                <li> <a href="#"> Nos services </a> </li>
-                <li> <a href="#"> Qui sommes-nous </a> </li>
-                <li> <a href="#"> Contactez-nous </a> </li>
+                <li> <a href="#offres">  Offres</a> </li>
+                <li> <a href="#services">  Services </a> </li>
+
+                <li> <a href="#clients">  Clients </a> </li>
+                <li> <a href="#quisommenous"> Qui sommes-nous </a> </li>
+                <li> <a href="#contact"> Contactez-nous </a> </li>
             </ul>
         </nav>
         <!-- Mobile menu -->
@@ -43,9 +44,9 @@
     </header>
 
     <main class="w-full flex flex-col items-center">
-        <section class="home-img w-full h-auto min-h-[35rem] relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 " >
+        <section  class="home-img w-full h-auto min-h-[35rem] relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 " >
             <div class="absolute inset-0" style="opacity: 1; transform: none;">
-                <img src="/images/image1.jpg" alt="Slide 1" id="slide" class="h-full w-full object-cover opacity-50 transition-transform duration-500 ease-in-out">
+                <img src="public/images/image1.jpg" alt="Slide 1" id="slide" class="h-full w-full object-cover opacity-50 transition-transform duration-500 ease-in-out">
             </div>
             <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
                 <button id="dots" class="spots h-2 w-2 rounded-full transition-all bg-white w-4" aria-label="Go to slide 1"> </button>
@@ -60,7 +61,7 @@
                 </div>
             </div>
         </section>
-        <section class="offres w-full flex flex-col justify-around items-center gap-5">
+        <section    id="offres" class="offres w-full flex flex-col justify-around items-center gap-5">
             <h2 class="text-3xl font-bold text-center mt-10">Nos offres</h2>
             <span> Des solutions sur-mesure adaptées à vos besoins en digitalisation </span>
             <div class="w-3/5 flex gap-5">
@@ -107,7 +108,7 @@
                 <div class="w-full flex px-15 flex-col md:flex-row gap-6 justify-center mt-10">
                     <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
                         <div class="w-full h-[10rem] service-card-header">
-                            <img src="../images/img_card1.png" class="w-full h-full object-cover rounded-t-lg" alt="">
+                            <img src="public/images/img_card1.png" class="w-full h-full object-cover rounded-t-lg" alt="">
                         </div>
                         <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
                             <h3 class="text-xl font-bold">Audit stratégique et conseil en intégration</h3>
@@ -116,7 +117,7 @@
                     </div>
                     <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
                         <div class="w-full h-[10rem] service-card-header">
-                            <img src="../images/img_card2.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                            <img src="public/images/img_card2.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
                         </div>
                         <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
                             <h3 class="text-xl font-bold">Gestion de projets informatiques</h3>
@@ -125,7 +126,7 @@
                     </div>
                     <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
                         <div class="w-full h-[10rem] service-card-header">
-                            <img src="../images/img_card3.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                            <img src="public/images/img_card3.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
                         </div>
                         <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
                             <h3 class="text-xl font-bold">Formations et conduite du changement</h3>
@@ -134,7 +135,7 @@
                     </div>
                     <div class="w-[25%] h-[25rem] rounded-lg shadow-md service-card" style="opacity: 1; transform: none;">
                         <div class="w-full h-[10rem] service-card-header">
-                            <img src="../images/img_card4.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
+                            <img src="public/images/img_card4.jpg" class="w-full h-full object-cover rounded-t-lg" alt="">
                         </div>
                         <div class="w-full h-[15rem] space-y-5 service-card-body p-5 text-center">
                             <h3 class="text-xl font-bold">Délégation de compétences / régie</h3>
@@ -144,7 +145,7 @@
                 </div>
             </div>
         </section>
-        <section class="w-[75rem] py-5 bg-white mt-12" id="clients">
+        <section  id="clients" class="w-[75rem] py-5 bg-white mt-12" >
             <div class="text-center">
                 <h2 class="text-2xl font-bold mb-4 text-center text-[#2d3748]">Nos Clients</h2>
                 <h2 class="text-3xl font-bold text-[#2d3748]">Ils nous font confiance</h2>
@@ -153,53 +154,53 @@
                 <div class="flex space-x-10" id="logo-container">
                     <!-- Logos des clients -->
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <!-- Répéter les logos pour un défilement fluide -->
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                     <div class="flex-shrink-0 flex justify-center items-center w-40 h-20">
-                        <img src="/images/logo1.png" alt="Client 0" class="client-logo">
+                        <img src="public/images/logo1.png" alt="Client 0" class="client-logo">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="w-[75rem] px-8 py-16 bg-gray-100 " id="about">
+        <section id="quisommenous" class="w-[75rem] px-8 py-16 bg-gray-100 " id="about">
             <div class="flex flex-col md:flex-row items-start gap-10 mb-16" style="opacity: 1; transform: none;">
                 <div class="flex-1">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4" style="opacity: 1; transform: none;">Notre Mission</h2>
@@ -243,21 +244,21 @@
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
                     <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
-                        <img src="../images/profile1.jpg" alt="Mme MMM MMMM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <img src="public/images/profile1.jpg" alt="Mme MMM MMMM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800">Mme Naaar</h3>
                             <p class="text-gray-600">Directrice Générale</p>
                         </div>
                     </div>
                     <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
-                        <img src="../images/profile2.jpg" alt="M. LOREM LOREM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <img src="public/images/profile2.jpg" alt="M. LOREM LOREM" class="w-16 h-16 object-cover rounded-full border border-gray-300">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800">M. Choco Choco</h3>
                             <p class="text-gray-600">Président</p>
                         </div>
                     </div>
                     <div class="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4" style="opacity: 1; transform: none;">
-                        <img src="../images/profile3.jpg" alt="M. LIP LIP" class="w-16 h-16 object-cover rounded-full border border-gray-300">
+                        <img src="public/images/profile3.jpg" alt="M. LIP LIP" class="w-16 h-16 object-cover rounded-full border border-gray-300">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800">M. Jaay Taar</h3>
                             <p class="text-gray-600">Responsable Conformité</p>
@@ -267,7 +268,7 @@
             </div>
         </section>
         
-        <section class="w-[75rem] py-12 bg-blue-50" id="contact" style="opacity: 1; transform: none;">
+        <section id="contact" class="w-[75rem] py-12 bg-blue-50" id="contact" style="opacity: 1; transform: none;">
             <div class="max-w-6xl mx-auto px-4 text-center" style="opacity: 1; transform: none;">
                 <h2 class="text-2xl font-bold mb-10">Contactez-nous</h2>
                 <div class="flex flex-col md:flex-row gap-8">
@@ -301,7 +302,7 @@
         <footer class="w-[75rem] bg-blue-100 text-white py-12">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-16">
                 <div class="flex flex-col items-center md:items-start">
-                    <img src="../images/Logo-stream-management.png" alt="Stream Management" class="w-24 mb-2">
+                    <img src="public/images/Logo-stream-management.png" alt="Stream Management" class="w-24 mb-2">
                     <p class="text-sm font-semibold text-[#2B579A]">Stream Management</p>
                 </div>
                 <div class="text-left text-[#2B579A] md:text-left mt-4 md:mt-0">
@@ -323,11 +324,12 @@
     </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/cards.js"></script>
-    <script src="/js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
+  <script type="module" src="src/js/index.js"></script>
+  <script type="module" src="src/js/cards.js"></script>
+  <script type="module" src="src/js/menu.js"></script>
+  <script type="module" src="src/js/slider.js"></script>
+
 
 </body>
 </html>
